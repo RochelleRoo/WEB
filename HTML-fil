@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to My Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Link to your CSS file for styling -->
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-home"></i> Welcome to My Website</h1>
+        <!-- The <i> tag is used for Font Awesome icons. Here, it's the home icon. -->
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="product.html"><i class="fas fa-shopping-bag"></i> Products</a></li>
+                <li><a href="om-oss.html"><i class="fas fa-users"></i> About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Welcome to My Website</h1>
+            <!-- Using <h1> for the main heading -->
+            <p>This is the homepage content.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 My Website</p>
+    </footer>
+</body>
+</html>
