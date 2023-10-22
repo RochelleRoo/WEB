@@ -1,1 +1,138 @@
-<link rel="stylesheet" type="text/css" href="css/style.css">
+/* Felles versjon */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+/* CSS for desktop versjon */
+@media (min-width: 768px) {
+    .product {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 10px;
+        max-width: 100%;
+    }
+
+    .product-image {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    .product-details {
+        max-width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .add-to-cart {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .add-to-cart:hover {
+        background-color: #555;
+    }
+
+    .product-container {
+        text-align: center;
+        background-color: #f0f0f0;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        width: 300px;
+        margin: 0 auto;
+    }
+
+    .product-title {
+        font-size: 24px;
+        margin-top: 10px;
+    }
+
+    .product-subtitle {
+        font-size: 18px;
+        color: #888;
+    }
+}
+
+/* CSS for mobil versjon*/
+@media (max-width: 767px) {
+    .product {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 10px;
+        max-width: 100%;
+    }
+
+    .product-image {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    .product-details {
+        max-width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .add-to-cart {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    .add-to-cart:hover {
+        background-color: #555;
+    }
+
+    .product-container {
+        text-align: center;
+        background-color: #f0f0f0;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .product-title {
+        font-size: 20px;
+        margin-top: 10px;
+    }
+
+    .product-subtitle {
+        font-size: 16px;
+        color: #888;
+    }
+}
+body {
+    background-color: pink;
+}

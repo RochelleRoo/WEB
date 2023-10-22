@@ -1,28 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta charset="UTF-8">
-    <title>Welcome to My Website</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"> 
+    <!--Linje 5 og 6 viser om css og fontwesome nettsiden blir brukt i HTML-fil-->
+
 </head>
-<body>
+<body> <!--Denne seksjon inneholder informasjon for nettsiden-->
     <header>
-        <h1>Welcome to My Website</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="product.html">Products</a></li>
-            <li><a href="om-oss.html">About Us</a></li>
-        </ul>
-    </nav>
+        <div>
+            <i class="fas fa-check-circle"></i>
+            <p style="display: inline;">Retur i butikk</p>
+          </div> <!--Jeg hadde brukt <p> for å skrive tekst inni nettsiden-->
+            <p>Sikker Belastning</p>
+        <a href="konto.html">Login</a> <!--Der brukte jeg a-href funksjon til å åpne konto.html filen for login knapp-->
+    </header> 
     <main>
-        <h2>Featured Content</h2>
-        <p>This is the homepage content.</p>
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <input type="search" name="query" placeholder="Search...">
+        <!--Her bruker jeg class funksjon til å få icon fra fontawesome også brukte jeg input field for search i nettsiden min-->
+        <br>
+        <h2 style="font-size: 36px; text-align: center;">Shosie</h2>
+        <div style="text-align: center;">
+            <a href="product.html">adidas</a>
+            <a href="product.html">dame sko</a>
+            <a href="product.html">herre sko</a>
+            <a href="product.html">nike</a>
+        </div>
+        <!--Jeg hadde flere navigasjon link for hvert tekst så brukte jeg div element-->
+        <section class="products">
+            <div class="center-container">
+                <h2><a href="product.html">Kjøp Nå</a></h2>
+                <img src="img/feet-1840619_1280.jpg" alt="Hero image" width="300" height="200">
+                <br> <a href="https://pixabay.com/photos/feet-footwear-nike-shoes-sneakers-1840619/">Bilde fra pixabay</a>
+
+            </div>
+            <!--Her brukte jeg class attribute til å skrive forskjellige elementer for ett produkt-->
+        </section>
     </main>
     <footer>
-        <p>&copy; 2023 My Website</p>
+        <p>Copyright &copy; 2023 Shosie</p>
     </footer>
 </body>
 </html>
