@@ -136,3 +136,13 @@ body, html {
 body {
     background-color: pink;
 }
+
+.flex-sb article {
+    flex-basis: 50%;
+    margin: 1rem auto;
+    text-align: center;
+  }
+  .flex-sb article img {
+    width: 80%;
+  }
+  

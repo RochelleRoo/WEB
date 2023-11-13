@@ -1,44 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"> 
-    <!--Linje 5 og 6 viser om css og fontwesome nettsiden blir brukt i HTML-fil-->
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Velkommen til Shosie - din destinasjon for kvalitetssko. Utforsk vårt utvalg av Adidas, Nike og mer.">
+    <meta name="keywords" content="shoes, sneakers, Adidas, Nike, fashion">
+    <meta name="author" content="Ditt navn eller bedriftens navn">
+    <title>Shosie - Kvalitetssko for enhver anledning</title>
+    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <style>
+        .skip {
+            position: absolute;
+            left: -10000px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+        .skip:focus {
+            position: static;
+            width: auto;
+            height: auto;
+        }
+    </style>
 </head>
 <body> <!--Denne seksjon inneholder informasjon for nettsiden-->
-    <header>
+    <header style="display: flex; justify-content: space-around;">
         <div>
-            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-check-circle" aria-hidden="true" title="Retur i butikk"></i>
             <p style="display: inline;">Retur i butikk</p>
-          </div> <!--Jeg hadde brukt <p> for å skrive tekst inni nettsiden-->
+        </div> <!--Jeg hadde brukt <p> for å skrive tekst inni nettsiden-->
+        
         <div>
-            <i class="fas fa-shoe-prints"></i>
+            <i class="fas fa-shoe-prints" aria-hidden="true" title="Sikker Belastning"></i>
             <p style="display: inline;">Sikker Belastning</p>
-         </div>
-              
-        <a href="konto.html">Login</a> <!--Der brukte jeg a-href funksjon til å åpne konto.html filen for login knapp-->
-    </header> 
-    <main>
-        <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+
+        <a href="#main" class="skip">Skip to main content</a>
+
+        <nav>
+            <!-- Add links to other pages -->
+            <a href="index.html" aria-label="Home">Home</a>
+            <a href="product.html" aria-label="Products">Products</a>
+            <a href="konto.html" aria-label="Login">Login</a>
+            <a href="analyse.html" aria-label="Analysis">Analysis</a>
+        </nav>
+
+        <i class="fa fa-search" aria-hidden="true" title="Søk"></i>
+        <label for="search"></label>
         <input type="search" name="query" placeholder="Search...">
+    </header>
+    <main id="main">
         <!--Her bruker jeg class funksjon til å få icon fra fontawesome også brukte jeg input field for search i nettsiden min-->
-        <br>
-        <h2 style="font-size: 36px; text-align: center;">Shosie</h2>
-        <div style="text-align: center;">
+        <h1 style="font-size: 36px; text-align: center;">Shosie</h1>
+        <section style="text-align: center;">
             <a href="product.html">adidas</a>
             <a href="product.html">dame sko</a>
             <a href="product.html">herre sko</a>
             <a href="product.html">nike</a>
-        </div>
+        </section>
         <!--Jeg hadde flere navigasjon link for hvert tekst så brukte jeg div element-->
         <section class="products">
             <div class="center-container">
                 <h2><a href="product.html">Kjøp Nå</a></h2>
-                <img src="img/feet-1840619_1280.jpg" alt="Hero image" width="300" height="200">
-                <br> <a href="https://pixabay.com/photos/feet-footwear-nike-shoes-sneakers-1840619/">Bilde fra pixabay</a>
-
+                <img src="img/feet-1840619_1280.jpg" alt="Person wearing Nike sneakers, walking on a path" width="300" height="200">
+                <br>
+                <a href="https://pixabay.com/photos/feet-footwear-nike-shoes-sneakers-1840619/">Bilde fra pixabay</a>
             </div>
             <!--Her brukte jeg class attribute til å skrive forskjellige elementer for ett produkt-->
         </section>

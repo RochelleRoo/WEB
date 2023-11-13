@@ -1,59 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Utforsk vårt utvalg av Nike Air Huara. Kjøp komfortable løpesko av høy kvalitet.">
+    <meta name="keywords" content="Nike Air Huara, løpesko, sportssko, sko">
+    <meta name="author" content="Ditt navn eller bedriftens navn">
+    <title>Product - Kvalitetssko for løping</title>
+    <link rel="stylesheet" href="css/style.css"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-<!--Linje 5 og 6 viser om css og fontwesome nettsiden blir brukt i HTML-fil-->
-
+    <style>
+        .skip {
+            position: absolute;
+            left: -10000px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+        .skip:focus {
+            position: static;
+            width: auto;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Sneakers</h1>
-      <div>
-        <i class="fas fa-check-circle"></i>
-        <p style="display: inline;">Retur i butikk</p>
-      </div>
-      <div>
-        <i class="fas fa-shoe-prints"></i>
-        <p style="display: inline;">Sikker Belastning</p>
-     </div>
-      <a href="product.html">login </a> <br>
-      <a href="index.html">Hjem </a> <br>
-      <i class="fa fa-search" aria-hidden="true"></i>
-      <input type="search" name="query" placeholder="Search...">
+    <header style="display: flex; justify-content: space-around;">
+        <div>
+            <i class="fas fa-check-circle" aria-hidden="true" title="Retur i butikk"></i>
+            <p style="display: inline;">Retur i butikk</p>
+        </div> <!--Jeg hadde brukt <p> for å skrive tekst inni nettsiden-->
+        
+        <div>
+            <i class="fas fa-shoe-prints" aria-hidden="true" title="Sikker Belastning"></i>
+            <p style="display: inline;">Sikker Belastning</p>
+        </div>
 
-        <br>
+        <a href="#main" class="skip">Skip to main content</a>
+
+        <nav>
+            <!-- Add links to other pages -->
+            <a href="index.html" aria-label="Home">Home</a>
+            <a href="product.html" aria-label="Products">Products</a>
+            <a href="konto.html" aria-label="Login">Login</a>
+            <a href="analyse.html" aria-label="Analysis">Analysis</a>
+        </nav>
+
+        <i class="fa fa-search" aria-hidden="true" title="Søk"></i>
+        <label for="search"></label>
+        <input type="search" name="query" placeholder="Search...">
     </header>
     <!--I den koden brukte jeg header elementet for nettsiden min for å skrive overskriften, tekst, og HTML-lenken som kobler teksten,samtidig legge til input field.-->
-
-    <section class="product">
-        <div class="product-image">
-            <img src="img/basketball-4519198_1280.jpg" alt="Running Shoe">
-            <br> <a href="https://pixabay.com/photos/basketball-shoes-play-one-red-4519198/">Bilde fra pixabay</a>
-
-        </div>
-        <!--Denne koden bruker section element for produkt på nettsiden-->
-        <div class="product-details">
-            <h2>Nike Air Huara</h2>
-
-            <label for="size">Størrelse:</label>
-            <select id="size" name="size">
-                <option value="36">36</option>
-                <option value="38">38</option>
-                <option value="40">40</option>
-                <option value="45">45</option>
-            </select>
-            <!--her brukte jeg option element, for at bruker kan velg mellom størrelse -->
-            <p class="price">699 Kr</p>
-            <a href="konto.html">
-              <button class="add-to-cart">
-                  <i class="fa fa-shopping-basket" aria-hidden="true"></i> Legg til i Handlekurven
-              </button>
-          </a>
-          
-            <p>Frakt og Retur</p>
-        </div>
-    </section>
+    <main id="main" itemscope itemtype="https://schema.org/Product">
+        <h1>Sneakers</h1>
+        <section class="product">
+            <div class="product-image">
+                "<img itemprop="image" src="img/basketball-4519198_1280.jpg" alt="Nike Air Huara Running Shoe">"
+                <br> <a href="https://pixabay.com/photos/basketball-shoes-play-one-red-4519198/">Bilde fra pixabay</a>
+                
+            </div>
+            <!--Denne koden bruker section element for produkt på nettsiden-->
+            <div class="product-details">
+                <h2>Nike Air Huara</h2>
+                
+                <label id="size-label" for="size">Størrelse:</label>
+                <select id="size" name="size" aria-labelledby="size-label">
+                    <option value="36">36</option>
+                    <option value="38">38</option>
+                    <option value="40">40</option>
+                    <option value="45">45</option>
+                </select>
+                <!--her brukte jeg option element, for at bruker kan velg mellom størrelse -->
+                <p class="price">699 Kr</p>
+                <a href="konto.html">
+                    <h3 itemprop="name">Pink runners</h3>
+                    <div itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                        <meta itemprop="reviewCount" content="100">
+                        <meta itemprop="ratingValue" content="4.4">
+                    </div>
+                    <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                        <meta itemprop="priceCurrency" content="NOK">
+                        <span itemprop="price" content="1499.00">1499,00kr</span>
+                    </div>
 </body>
 </html>
 

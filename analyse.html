@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Analysis</title>
+    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <style>
+        .skip {
+            position: absolute;
+            left: -10000px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+        .skip:focus {
+            position: static;
+            width: auto;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header style="display: flex; justify-content: space-around;">
+        <div>
+            <i class="fas fa-check-circle" aria-hidden="true" title="Retur i butikk"></i>
+            <p style="display: inline;">Retur i butikk</p>
+        </div> <!--Jeg hadde brukt <p> for å skrive tekst inni nettsiden-->
+        
+            <div>
+                <i class="fas fa-shoe-prints" aria-hidden="true" title="Sikker Belastning"></i>
+                <p style="display: inline;">Sikker Belastning</p>
+            </div>
+    
+            <a href="#main" class="skip">Skip to main content</a>
+    
+            <nav>
+                <!-- Add links to other pages -->
+                <a href="index.html" aria-label="Home">Home</a>
+                <a href="product.html" aria-label="Products">Products</a>
+                <a href="konto.html" aria-label="Login">Login</a>
+            <a href="analyse.html" aria-label="Analysis">Analysis</a>
+        </nav>
+
+        <i class="fa fa-search" aria-hidden="true" title="Søk"></i>
+        <label for="search"></label>
+        <input type="search" name="query" placeholder="Search...">
+    </header>
+    <main id="main">
+        <h1>Website Analysis and Improvements</h1>
+        <!-- You can use sections to separate different parts of the analysis -->
+        <section>
+            <h2>Google Trend </h2>
+            <!-- Use unordered or ordered lists to list issues -->
+            <ul>
+                <li>Joggesko: indicates high search interest in several Norwegian regions, suggesting a targeted marketing approach for these areas could be beneficial. 
+                    The search term's popularity also shows seasonal peaks, which can inform promotional and stock planning strategies for a shoe store.</li>
+                <li>NikeSko: The Google Trends data for "nike sko" indicates steady interest throughout the past year in Norway, with the highest regional interest in Rogaland, Hordaland, Aust-Agder, Møre og Romsdal, and Hedmark. 
+                    This suggests that "nike sko" is a consistently popular search term, and these regions may be particularly lucrative markets for targeting Nike shoe promotions.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Lighthouse Ananlysis</h2>
+            <img src="img/SEO index.html før.png" alt="SEO index før">
+            <img src="img/SEO produkt.html før.png" alt="SEO produkt før">
+            <img src="img/SEO konto.html før.png" alt="SEO konto før">
+            <dl>
+                <dt><img src="img/lighthouse_seo.png" alt="lighthouse_seo"></dt>
+                <dd>Got only one recomendation from SEO analysis, which is to add a meta description to all the page.</dd>
+                <dt><img src="img/lighthouse_uu.png" alt="lighthouse_uu"></dt>
+                <dd>In accessibility analysis got a perfect score of 100, did not get any recomendation for all the pages.</dd>
+            </dl>
+            <!-- Nøkkelord: Nike sko, addidas sko og joggesko. 
+            For at folk skal kunne komme seg til sko nettbutikken
+            min så må de kunne finne hva de liker. Nike, Adidas og
+            Joggesko er den mest trending når det kommer til søkefelt for sko-->
+        </section>
+        <section>
+            <h2>Wave Analysis</h2>
+            <!-- Shosie Wave før-->
+            <img src="img/WAVE index.html før.png" alt="WAVE Analysis index før">
+            <dl>
+                <dt><img src="img/index_search.png" alt="index_search"></dt>
+                <dd>Missing lable for search field</dd>
+                <dt><img src="img/index_img.png" alt="index_img"></dt>
+                <dd>Unclear alternative text</dd>
+                <dt><img src="img/index_uu.png" alt="index_uu"></dt>
+                <dd>Good use of semantic elements and, provided alternative text and aria-hidden attribute</dd>
+            </dl>
+            <img src="img/WAVE produkt.html før.png" alt="WAVE Analysis produkt før">
+            <dl>
+                <dt><img src="img/product_uu.png" alt="product_uu"></dt>
+                <dd>Good use of semantic elements and, provided alternative text, labeling of elements and aria-hidden attribute</dd>
+            </dl>
+            <img src="img/WAVE konto.html før.png" alt="WAVE Analysis konto før">
+            <dl>
+                <dt><img src="img/konto_uu.png" alt="konto_uu"></dt>
+                <dd>Good use of semantic elements and, provided alternative text and aria-hidden attribute</dd>
+            </dl>
+        </section>
+        <h2>ChatGPT Analysis</h2>
+            <h3>SEO Analysis</h3>
+            <img src="img/chatgpt_seo.png" alt="chatgpt_seo">
+            <h3>Accessibility Analysis</h3>
+            <h4>Index</h4>
+            <img src="img/chatgpt_index.png" alt="chatgpt_index">
+            <h4>Product</h4>
+            <img src="img/chatgpt_product.png" alt="chatgpt_product">
+            <h4>Konto</h4>
+            <img src="img/chatgpt_account.png" alt="chatgpt_account">
+        </section>
+        <section>
+            <h2>Analysis Table</h2>
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Lighthouse</th>
+                    <th>Wave</th>
+                    <th>ChatGPT</th>
+                </tr>
+                <tr>
+                    <th>SEO</td>
+                    <td>
+                        <ul>
+                            <li>Missing meta description</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Dose not provide SEO analysis</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Missing meta description</li>
+                            <li>Unclear alternative text</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Accessibility</td>
+                    <td>
+                        <ul>
+                            <li>Did not get any recomendation</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Missing lable for search field</li>
+                            <li>Unclear alternative text</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li>Divs can be replaced with semantic elements</li>
+                            <li>Add alternative text to the icons</li>
+                            <li>Add aria-taggs</li>
+                            <li>Some irelevant suggestions</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h2>Improvements</h2>
+            <h3>Index</h3>
+            <img src="img/after_index.png" alt="after_index">
+            <h3>Product</h3>
+            <img src="img/after_product.png" alt="after_product">
+            <h3>Konto</h3>
+            <img src="img/after_account.png" alt="after_account">
+            <h3>List of Improvements</h3>
+            <ul>
+                <li>Added meta description</li>
+                <li>Added alternative text to the images and icons</li>
+                <li>Added aria-hidden attribute to the icons</li>
+                <li>Added title attribute to the icons</li>
+                <li>Added aria-label to the search field</li>
+                <li>Replaced divs with semantic elements</li>
+                <li>Added aria-label to the links</li>
+                <li>Added aria-labelledby to the select element</li>
+                <li>Added fieldset and legend to the form</li>
+                <li>Moved script to the bottom of the body</li>
+            </ul>
+            <h3>After Improvements Analysis</h3>
+            <h4>Lighthouse</h4>
+            <p>Give 100/100 on both SEO ond Accessibility</p>
+            <h4>Wave</h4>
+            <p>No suggestions for improvements</p>
+            <h4>ChatGPT</h4>
+            <p>After implementing the suggestions from ChatGPT, it did not give any more suggestions for improvements</p>
+        </section>
+        <h1>Website Availability</h1>
+        <section>
+            <h2>Screen Reader Compatibility</h2>
+            <p>Evrerything is working as expected, the website reading was done by using the screen reader on my computer and the website was tested on different browsers and devices.</p>
+        </section>
+        <section>
+            <h2>Keyboard Navigation</h2>
+            <p>Keyboard navigation is working as expected</p>
+            <img src="img/skip_nav.png" alt="skip_nav">
+            <p>Added skip navigation link in header</p>
+        </section>
+        <section>
+            <h2>ARIA Attributes</h2>
+            <p>Added aria-label, aria-labelledby, aria-hidden and title attributes to the elements</p>
+        </section>
+        <section>
+            <h2>Rich Results Test</h2>
+            <img src="img/results rich produkt.png" alt="rich_result">
+            <p>Resultater fra google rich results</p>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2023 Shosie</p>
+    </footer>
+</body>
+</html>

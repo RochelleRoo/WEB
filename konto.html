@@ -1,55 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Oppdater din personlige informasjon på Shosie. Legg til eller endre navn, etternavn, adresse og telefonnummer.">
+    <meta name="keywords" content="profil, personlig informasjon, oppdater profil, Shosie konto">
+    <meta name="author" content="Ditt navn eller bedriftens navn">
+    <title>Min Profil - Shosie</title>
+    <link rel="stylesheet" href="css/style.css"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <!--På linje 5 og 6 i koden sjekker vi om css og font awesome brukes på nettsiden-->
-    <header1>
-        <div>
-            <i class="fas fa-check-circle"></i>
-            <p style="display: inline;">Retur i butikk</p>
-          </div>
-        <div>
-            <i class="fas fa-shoe-prints"></i>
-            <p style="display: inline;">Sikker Belastning</p>
-         </div>
-        <a href="index.html">Hjem </a> <br>
-        <i class="fa fa-search" aria-hidden="true"></i>
-        <input type="search" name="query" placeholder="Search...">
-        <!--I denne seksjonen finner du informasjon om nettsiden, hvor jeg brukte <p> elementer for tekstinnhold, inkuldert en lenke <a> for å åpne konto.html-filen via en loginknapp-->
-      </header1>
-   
-
+    <style>
+        .skip {
+            position: absolute;
+            left: -10000px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+        .skip:focus {
+            position: static;
+            width: auto;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <i class="fas fa-user"></i>
-        <h1 id="greeting">Hei, Sarah Hansen</h1>
+    <header style="display: flex; justify-content: space-around;">
+        <div>
+            <i class="fas fa-check-circle" aria-hidden="true" title="Retur i butikk"></i>
+            <p style="display: inline;">Retur i butikk</p>
+        </div> <!--Jeg hadde brukt <p> for å skrive tekst inni nettsiden-->
+        
+        <div>
+            <i class="fas fa-shoe-prints" aria-hidden="true" title="Sikker Belastning"></i>
+            <p style="display: inline;">Sikker Belastning</p>
+        </div>
+
+        <a href="#main" class="skip">Skip to main content</a>
+
+        <nav>
+            <!-- Add links to other pages -->
+            <a href="index.html" aria-label="Home">Home</a>
+            <a href="product.html" aria-label="Products">Products</a>
+            <a href="konto.html" aria-label="Login">Login</a>
+            <a href="analyse.html" aria-label="Analysis">Analysis</a>
+        </nav>
+
+        <i class="fa fa-search" aria-hidden="true" title="Søk"></i>
+        <label for="search"></label>
+        <input type="search" name="query" placeholder="Search...">
     </header>
     <!--Her brukte jeg fontawesome bibliotek for å hilse bruker med navne deres-->
-    
-    <section class="profile">
-        <form id="profile-form" onsubmit="updateProfile(); return false;">
-            <label for="name">Navn:</label>
-            <input type="text" id="name" name="name" value="Sarah" required>
+    <main id="main">
+        <section class="profile">
+            <i class="fas fa-user"></i>
+            <h1 id="greeting">Hei, Sarah Hansen</h1>
+            <form id="profile-form" onsubmit="updateProfile(); return false;">
+                <fieldset>
+                    <legend>Personlig informasjon</legend>
         
-            <label for="surname">Etternavn:</label>
-            <input type="text" id="surname" name="surname" value="Hansen" required>
-            
-            <br> 
-            
-            <label for="address">Address:</label>
-            <input type="text" id="address" name="address">
-            
-            <br>  
-            
-            <label for="mobile">TLF:</label>
-            <input type="tel" id="mobile" name="mobile">
-            
-            <button type="submit">Oppdater Profil</button>
-        </form>
-    </section>
-    <!--Jeg brukte section element for å organisere og strukturere innholdet på nettsiden og brukte form element til at brukere kan skrive innformasjonsystem. Fikk også hjelp av w3schools.com-->
+                    <label for="name">Navn:</label>
+                    <input type="text" id="name" name="name" value="Sarah" required>
+        
+                    <label for="surname">Etternavn:</label>
+                    <input type="text" id="surname" name="surname" value="Hansen" required>
+        
+                    <br> 
+        
+                    <label for="address">Adresse:</label>
+                    <input type="text" id="address" name="address">
+        
+                    <br>  
+        
+                    <label for="mobile">TLF:</label>
+                    <input type="tel" id="mobile" name="mobile">
+                </fieldset>
+        
+                <button type="submit">Oppdater Profil</button>
+            </form>
+        </section>
+        <!--Jeg brukte section element for å organisere og strukturere innholdet på nettsiden og brukte form element til at brukere kan skrive innformasjonsystem. Fikk også hjelp av w3schools.com-->
+    </main>
+    <!--Brukte den javascriptHTML til å få informasjon som er skrevet i form element til å vise på toppen av nettsiden, også brukte jeg w3schools.com til å lære litt mer om javascript-->
+    <footer>
+        <p>Copyright &copy; 2023 Shosie</p>
+    </footer>
     <script>
         function updateProfile() {
             const name = document.getElementById("name").value;
@@ -57,7 +93,6 @@
             document.getElementById("greeting").textContent = `Hei, ${name} ${surname}`;
         }
     </script>
-    <!--Brukte den javascriptHTML til å få informasjon som er skrevet i form element til å vise på toppen av nettsiden, også brukte jeg w3schools.com til å lære litt mer om javascript-->
 </body>
 </html>
 
